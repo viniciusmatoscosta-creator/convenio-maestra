@@ -244,11 +244,10 @@ export default function Home() {
       {/* ===== STATS BAR ===== */}
       <section className="bg-[#2D4260] py-16 md:py-20">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+          <div className="grid grid-cols-3 gap-8 md:gap-4">
             <StatCounter value={30} suffix="+" label="Anos de mercado" delay={0} />
-            <StatCounter value={15} suffix="%" label="Desconto fixo negociável" delay={0.1} />
-            <StatCounter value={75} suffix="%" label="Promoções com até" delay={0.2} />
-            <StatCounter value={7} suffix="" label="Unidades em Vinhedo" delay={0.3} />
+            <StatCounter value={75} suffix="%" label="Descontos nas ofertas" delay={0.1} />
+            <StatCounter value={20} suffix="+" label="Lojas em Vinhedo e Região" delay={0.2} />
           </div>
         </div>
       </section>
@@ -283,13 +282,13 @@ export default function Home() {
               },
               {
                 icon: <CreditCard className="w-6 h-6" />,
-                title: "Desconto Fixo de 15%",
-                desc: "Todos os colaboradores têm desconto fixo de 15% em todos os produtos, em todas as lojas.",
+                title: "Desconto Fixo*",
+                desc: "Todos os colaboradores têm desconto fixo em todos os produtos, em todas as lojas. *Valor negociável.",
               },
               {
                 icon: <ShoppingBag className="w-6 h-6" />,
-                title: "Até 75% nas Promoções",
-                desc: "Descontos que podem chegar a 75% nas promoções e ofertas especiais das Drogarias Maestra.",
+                title: "Até 75% de Desconto nas Ofertas",
+                desc: "Descontos que podem chegar a 75% nas ofertas e promoções especiais das Drogarias Maestra.",
               },
               {
                 icon: <Clock className="w-6 h-6" />,
