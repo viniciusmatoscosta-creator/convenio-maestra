@@ -144,7 +144,7 @@ export default function Home() {
             ))}
           </div>
           <a
-            href="#contato"
+            href="https://wa.me/5519996966543?text=Ol%C3%A1%2C%20vim%20pelo%20site!"
             className="bg-[#C20E1A] text-white px-5 py-2.5 text-sm font-semibold tracking-wide hover:bg-[#a00c16] transition-all duration-300 rounded-sm"
           >
             Solicitar Convênio
@@ -334,7 +334,7 @@ export default function Home() {
         <div className="relative z-10 container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <span className="text-[#C20E1A] font-display text-sm font-semibold tracking-[0.3em] uppercase">
+              <span className="text-white font-display text-sm font-semibold tracking-[0.3em] uppercase">
                 Sobre Nós
               </span>
               <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight">
@@ -408,14 +408,13 @@ export default function Home() {
                 </h2>
                 <p className="mt-6 text-lg text-[#585857] font-body leading-relaxed">
                   Oferecemos uma gama completa de serviços de saúde e bem-estar,
-                  disponíveis para todos os colaboradores conveniados diretamente
-                  em nossas unidades.
+                  disponíveis para todos os colaboradores conveniados.
                 </p>
               </div>
               <div className="relative">
                 <img
-                  src={HEALTH_IMG}
-                  alt="Serviços de saúde"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031538098/GES2bUhMofNg3AKf9cqaaM/vaccine-clinic-52Uk5HyQaMGhi8niC8biQQ.webp"
+                  alt="Clínica de Vacinas Maestra"
                   className="w-full rounded-sm shadow-2xl"
                 />
                 <div className="absolute -bottom-4 -left-4 bg-[#C20E1A] text-white p-4 rounded-sm">
@@ -432,7 +431,7 @@ export default function Home() {
               { icon: <Syringe className="w-5 h-5" />, name: "Aplicação de Injetáveis" },
               { icon: <Stethoscope className="w-5 h-5" />, name: "Clínica de Vacinas" },
               { icon: <Truck className="w-5 h-5" />, name: "Entregas Gratuitas" },
-              { icon: <TestTube className="w-5 h-5" />, name: "Exames Laboratoriais" },
+              { icon: <TestTube className="w-5 h-5" />, name: "Exames Rápidos" },
               { icon: <Ear className="w-5 h-5" />, name: "Perfuração de Orelha" },
               { icon: <Droplets className="w-5 h-5" />, name: "Testes Rápidos" },
               { icon: <Pill className="w-5 h-5" />, name: "Teste de Glicemia" },
@@ -529,7 +528,7 @@ export default function Home() {
             ].map((step, i) => (
               <AnimatedSection key={i} delay={i * 0.15}>
                 <div className="relative p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm h-full">
-                  <div className="font-display text-6xl font-bold text-[#C20E1A]/20 absolute top-4 right-6">
+                  <div className="font-display text-6xl font-bold text-white/20 absolute top-4 right-6">
                     {step.step}
                   </div>
                   <div className="w-12 h-12 flex items-center justify-center bg-[#C20E1A] text-white rounded-sm">
@@ -601,7 +600,7 @@ export default function Home() {
               <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold text-[#2D4260] tracking-tight leading-tight">
                 5 unidades em Vinhedo
                 <br />
-                <span className="text-[#585857]">prontas para atender</span>
+                <span className="text-[#585857]">e mais de 20 lojas na região</span>
               </h2>
             </div>
           </AnimatedSection>
@@ -697,6 +696,43 @@ export default function Home() {
                 </div>
               </AnimatedSection>
             ))}
+
+            {/* Card de outras cidades */}
+            <AnimatedSection delay={0.5}>
+              <div className="p-6 rounded-sm h-full border border-dashed border-[#007AB1]/40 bg-[#007AB1]/5 hover:bg-[#007AB1]/10 transition-all duration-300">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-[#007AB1]" />
+                  <div>
+                    <h3 className="font-display font-bold text-base text-[#2D4260]">
+                      Outras Cidades
+                    </h3>
+                    <p className="mt-2 font-body text-sm text-[#585857]">
+                      Também estamos presentes em:
+                    </p>
+                    <div className="mt-3 space-y-2">
+                      {[
+                        { city: "Louveira", units: "2 unidades" },
+                        { city: "Valinhos", units: "2 unidades" },
+                        { city: "Itatiba", units: "2 unidades" },
+                        { city: "Jundiaí", units: "3 unidades" },
+                        { city: "Campinas", units: "2 unidades" },
+                        { city: "Indaiatuba", units: "1 unidade" },
+                        { city: "Itupeva", units: "1 unidade" },
+                        { city: "Morungaba", units: "1 unidade" },
+                      ].map((loc, j) => (
+                        <div key={j} className="flex items-center justify-between">
+                          <span className="text-sm font-semibold text-[#2D4260] font-body">{loc.city}</span>
+                          <span className="text-xs text-[#585857]/70 font-body">{loc.units}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="mt-4 text-xs text-[#007AB1] font-semibold font-body">
+                      + de 20 lojas na região
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -717,7 +753,7 @@ export default function Home() {
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://bit.ly/ADM_Maestra"
+                  href="https://wa.me/5519996966543?text=Ol%C3%A1%2C%20vim%20pelo%20site!"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white text-[#C20E1A] px-8 py-4 font-display font-bold text-base tracking-wide hover:bg-white/90 transition-all duration-300 rounded-sm"
@@ -726,7 +762,7 @@ export default function Home() {
                   Fale Conosco
                 </a>
                 <a
-                  href="https://bit.ly/MaestraWhats"
+                  href="https://wa.me/5519996966543?text=Ol%C3%A1%2C%20vim%20pelo%20site!"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 font-display font-bold text-base tracking-wide hover:bg-white/10 transition-all duration-300 rounded-sm"
@@ -748,7 +784,7 @@ export default function Home() {
               <img
                 src={LOGO_URL}
                 alt="Drogarias Maestra"
-                className="h-10 object-contain brightness-0 invert"
+                className="h-12 object-contain"
               />
               <p className="mt-3 text-sm text-white/50 font-body">
                 Há mais de 30 anos cuidando da saúde
@@ -769,7 +805,7 @@ export default function Home() {
                 Delivery: (19) 98935-5581
               </p>
               <p className="text-sm text-white/50 font-body mt-1">
-                maestradelivery.com.br
+                juliana.roder@gmail.com
               </p>
               <p className="text-xs text-white/30 font-body mt-4">
                 Drogarias Maestra — Vinhedo/SP
