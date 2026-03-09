@@ -246,9 +246,9 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             <StatCounter value={30} suffix="+" label="Anos de mercado" delay={0} />
-            <StatCounter value={15} suffix="%" label="Desconto fixo" delay={0.1} />
-            <StatCounter value={75} suffix="%" label="Nas promoções" delay={0.2} />
-            <StatCounter value={5} suffix="" label="Unidades em Vinhedo" delay={0.3} />
+            <StatCounter value={15} suffix="%" label="Desconto fixo negociável" delay={0.1} />
+            <StatCounter value={75} suffix="%" label="Promoções com até" delay={0.2} />
+            <StatCounter value={7} suffix="" label="Unidades em Vinhedo" delay={0.3} />
           </div>
         </div>
       </section>
@@ -598,7 +598,7 @@ export default function Home() {
                 Nossas Unidades
               </span>
               <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold text-[#2D4260] tracking-tight leading-tight">
-                5 unidades em Vinhedo
+                7 unidades em Vinhedo
                 <br />
                 <span className="text-[#585857]">e mais de 20 lojas na região</span>
               </h2>
@@ -639,6 +639,20 @@ export default function Home() {
                 name: "Drogaria Maestra",
                 address: "Rua Felisbina Corazzari Matheus, 450",
                 neighborhood: "Vila João XXIII",
+                cep: "13280-000",
+                highlight: false,
+              },
+              {
+                name: "Maestra Capela",
+                address: "Av. Nossa Senhora de Lourdes, 90",
+                neighborhood: "Capela",
+                cep: "13280-000",
+                highlight: false,
+              },
+              {
+                name: "Maestra Econômica",
+                address: "Av. Benedito Storani, 288",
+                neighborhood: "Centro",
                 cep: "13280-000",
                 highlight: false,
               },
