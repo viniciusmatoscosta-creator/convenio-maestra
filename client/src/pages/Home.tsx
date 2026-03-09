@@ -174,7 +174,7 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="inline-block text-[#C20E1A] font-display text-sm font-semibold tracking-[0.3em] uppercase mb-6 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-sm">
+              <span className="inline-block text-white font-display text-sm font-semibold tracking-[0.3em] uppercase mb-6 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-sm">
                 Proposta de Convênio Farmacêutico
               </span>
             </motion.div>
@@ -189,7 +189,7 @@ export default function Home() {
               <br />
               dos seus
               <br />
-              <span className="text-[#C20E1A]">colaboradores</span>
+              <span className="text-[#f3202e]">colaboradores</span>
             </motion.h1>
 
             <motion.p
